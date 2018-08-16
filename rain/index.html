@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RAINING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <style media="screen">
+      body {
+        background: url('./rain.gif') center center repeat-x #183243;
+        background-size: auto 100%;
+        background-attachment: fixed;
+        height: 100vh;
+        position: relative;
+        border-style: inset;
+      }
+      main {
+        background: RGBA(101, 108, 120, 0.8);
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        padding: 1rem;
+        z-index: 1;
+      }
+      main::after {
+        content: url('drop.gif');
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+
+      }
+      p {
+        max-width: 500px;
+        font-size: 10rem;
+        font-weight: 900;
+
+      }
+      span {
+        background: pink;
+        color: white;
+      }
+      .ponyo {
+        position: absolute;
+        right: 50px;
+        bottom: -200px;
+        display: block;
+        z-index: 2;
+      }
+      .cloud {
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        display: block;
+        z-index: 2;
+        width: 300px;
+      }
+      .sad {
+        position: absolute;
+        left: -25px;
+        bottom: 0;
+        display: block;
+        z-index: 2;
+        width: 200px;
+        transform: rotate(10deg);
+      }
+      @media all and (min-width: 768px){
+        p {
+          font-size: 20rem;
+        }
+        .ponyo {
+          bottom: 50px;
+        }
+        .cloud {
+          top: -200px;
+          right: -200px;
+        }
+      }
+      @media all and (min-width: 1200px){
+        p {
+          font-size: 30rem;
+        }
+        .cloud {
+          top: -100px;
+          right: -150%;
+        }
+      }
+      @media all and (min-width: 1600px){
+        p {
+          font-size: 40rem;
+        }
+        .cloud {
+          top: -100px;
+          right: -200%;
+        }
+      }
+    </style>
+</head>
+
+<body>
+  <img class="sad" src="sad.gif" alt="">
+    <main>
+      <img class="ponyo" src="ponyo.gif" alt="">
+      <img class="cloud" src="cloud.gif" alt="">
+      <p>rain<span>.</span> </p>
+    </main>
+    <script>
+    // Put Scripts Here
+    </script>
+</body>
+
+</html>
